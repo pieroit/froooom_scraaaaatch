@@ -41,7 +41,7 @@ class PieroitLinearRegression(PieroitMLAlgo):
 
                 mse += error * error
 
-            print 'Epoch', epoch, 'error', mse/len(X)
+            print('Epoch', epoch, 'error', mse/len(X))
 
 
     def predictOne(self, x):
@@ -71,5 +71,5 @@ if __name__ == '__main__':
 
 
 
-    print '***Error Scikit***', mean_squared_error(skpredictions, targets)
-    print '***Error Piero***', mean_squared_error(predictions, targets)
+    print('***Error Scikit***', mean_squared_error(skpredictions, targets))
+    print('***Error Piero***', mean_squared_error(predictions, targets))

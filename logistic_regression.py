@@ -46,7 +46,7 @@ class PieroitLogisticRegression(PieroitMLAlgo):
 
                 mse += error * error
 
-            print 'Epoch', epoch, 'error', mse/len(X)
+            print('Epoch', epoch, 'error', mse/len(X))
 
 
     def predictOne(self, x):
@@ -82,8 +82,8 @@ if __name__ == '__main__':
     sklr.fit(features, targets)
     skpredictions = sklr.predict( features )
 
-    print '***Error Scikit***', classification_report(skpredictions, targets)
-    print '***Error Piero***', classification_report(predictions, targets)
+    print('***Error Scikit***', classification_report(skpredictions, targets))
+    print('***Error Piero***', classification_report(predictions, targets))
 
-    print sklr.coef_, sklr.intercept_
-    print lr.weights
+    print(sklr.coef_, sklr.intercept_)
+    print(lr.weights)
